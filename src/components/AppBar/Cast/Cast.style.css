@@ -1,0 +1,28 @@
+.castList {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .castItem {
+    margin-bottom: 25px;
+  }
+  
+  .castImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .castInfo {
+    margin-top: 10px;
+  }
+  
+  .castName {
+    font-weight: bold;
+  }
+  
+  .castCharacter {
+    color: #888;
+  }
+  
