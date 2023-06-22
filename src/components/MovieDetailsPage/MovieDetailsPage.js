@@ -1,7 +1,13 @@
 import styles from './MovieDetailsPage.styles.css';
 import Container from 'components/Container/Container';
 import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
+import {
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigate,
+  useParams,
+} from 'react-router-dom';
 import { fetchMoviesDetails } from 'components/service/service';
 import PageHeading from 'components/Pageheading/Pageheading';
 
