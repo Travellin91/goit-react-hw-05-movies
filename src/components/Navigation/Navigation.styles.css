@@ -1,0 +1,16 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 18px;
+  transition: color 250ms linear;
+}
+
+.link:focus,
+.link:hover {
+  color: #2196f3;
+  background-color: #f4f8fa;
+  border-radius: 10px;
+}
