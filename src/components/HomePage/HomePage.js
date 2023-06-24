@@ -1,6 +1,6 @@
 import Container from 'components/Container/Container';
 import PageHeading from 'components/Pageheading/Pageheading';
-import MovieList from 'components/TrendingMovies/MovieList';
+import MovieList from 'components/Movies/Movies';
 import { useEffect, useState } from 'react';
 import { getMovies } from 'components/service/service';
 import NotFoundView from 'components/ui/NotFoundView';

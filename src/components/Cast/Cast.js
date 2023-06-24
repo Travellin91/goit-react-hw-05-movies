@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMoviesCredits } from 'services/movies-api';
+import { fetchMoviesCredits } from 'components/service/service';
 import styles from './Cast.styles.css';
 
 const Cast = () => {

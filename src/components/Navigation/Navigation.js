@@ -1,28 +1,23 @@
 import { NavLink } from 'react-router-dom';
-import styles from './Navigation.styles.css';
+import styles from 'components/Navigation/Navigation.styles.css';
 
 const Navigation = () => {
-  let activeClassName = {
-    color: '#2196f3',
-  };
-
   return (
     <nav>
       <NavLink
+        exact="true"
         to="/"
         className={styles.link}
-        style={({ isActive }) => (isActive ? activeClassName : undefined)}
-        isActive={(match) => match && match.isExact}
+        activeclassname="active"
       >
-        Home
+        Додому
       </NavLink>
       <NavLink
         to="/movies"
         className={styles.link}
-        style={({ isActive }) => (isActive ? activeClassName : undefined)}
-        isActive={(match) => match && match.path.includes('/movies')}
+        activeclassname="active"
       >
-        Movies
+        &nbsp;Фільми
       </NavLink>
     </nav>
   );
