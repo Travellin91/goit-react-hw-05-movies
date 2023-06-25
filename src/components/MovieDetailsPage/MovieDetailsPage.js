@@ -26,7 +26,9 @@ export default function MovieDetailsPage() {
     color: '#2196f3',
   };
 
-  const handleClick = () => navigate(location?.state?.from ?? '/');
+  const handleClick = () => {
+    navigate(-1);
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -44,15 +46,15 @@ export default function MovieDetailsPage() {
   return (
     <>
       <Container>
-        <button onClick={handleClick} className='backButton'>
-        Повернутися назад
+        <button onClick={handleClick} className="backButton">
+          Повернутися назад
         </button>
 
         {movie && <PageHeading text={movie.title} />}
         {loading && 'Завантаження ...'}
         {error && <div>{error}</div>}
         {movie && (
-          <div className='info_type'>
+          <div className="info_type">
             <img
               src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
@@ -60,21 +62,21 @@ export default function MovieDetailsPage() {
             <h3>{movie.title}</h3>
             <p>({getYear()})</p>
             <p>Рейтинг користувачів: {movie.popularity}</p>
-            <div className='movie_overview'>
+            <div className="movie_overview">
               <h3>Огляд</h3>
               <p>{movie.overview}</p>
             </div>
           </div>
         )}
         <hr />
-        <div className='info_types'>
-          <h2 className='info'>Додаткова інформація</h2>
+        <div className="info_types">
+          <h2 className="info">Додаткова інформація</h2>
           <NavLink
             to={`/movies/${movieId}/reviews`}
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className='reviews'>Відгуки</p>
+            <p className="revPiews">Відгуки</p>
           </NavLink>
 
           <NavLink
@@ -82,7 +84,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className='cast'>Акторський склад</p>
+            <p className="cast">Акторський склад</p>
           </NavLink>
           <hr />
           <Outlet />
