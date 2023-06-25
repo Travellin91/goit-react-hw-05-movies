@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesCredits } from 'components/service/service';
-import styles from './Cast.styles.css';
+import styles from 'components/Cast/styles.css';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -29,18 +29,18 @@ const Cast = () => {
     <>
       {loading && 'Завантаження...'}
       {error && <div>{error}</div>}
-      <ul className={styles.castList}>
+      <ul className='castList'>
         {cast.map(castItem => {
           return (
-            <li key={castItem.id} className={styles.castItem}>
+            <li key={castItem.id} className='castItem'>
               <img
                 src={`https://image.tmdb.org/t/p/w300${castItem.profile_path}`}
                 alt={`${castItem.name} портрет`}
                 className={styles.castImage}
               />
-              <div className={styles.castInfo}>
-                <p className={styles.castName}>Ім'я: {castItem.name}</p>
-                <p className={styles.castCharacter}>Персонаж: {castItem.character}</p>
+              <div className='castInfo'>
+                <p className='castName'>Ім'я: {castItem.name}</p>
+                <p className='castCharacter'>Персонаж: {castItem.character}</p>
               </div>
             </li>
           );
