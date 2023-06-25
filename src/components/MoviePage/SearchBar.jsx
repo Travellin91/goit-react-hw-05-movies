@@ -1,4 +1,4 @@
-import styles from './MoviesPage.styles.css';
+import 'components/MoviePage/MoviesPage.styles.css';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -21,7 +21,7 @@ const Searchbar = ({ onSearch }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={styles.searchForm}>
+      <form onSubmit={handleSubmit} className='searchForm'>
         <input
           type="text"
           name="searchQuery"
@@ -30,9 +30,9 @@ const Searchbar = ({ onSearch }) => {
           autoFocus
           placeholder="Пошук ..."
           onChange={handleQuerySearch}
-          className={styles.searchInput}
+          className='searchInput'
         />
-        <button type="submit" className={styles.searchButton}>
+        <button type="submit" className='searchButton'>
           Пошук
         </button>
       </form>

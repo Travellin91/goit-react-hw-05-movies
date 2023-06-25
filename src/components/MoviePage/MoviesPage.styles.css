@@ -1,6 +1,9 @@
 .searchForm {
     margin-left: 35%;
     margin-right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .searchInput {
     padding: 10px 15px;
@@ -9,6 +12,7 @@
     margin-right: 20px;
     font-size: 20px;
     outline: transparent;
+    transition: color 250ms linear;
   }
   .searchInput:hover {
     background-color: #f4f8fa;
@@ -16,10 +20,9 @@
   
   .searchButton {
     cursor: pointer;
-    padding: 8px 15px;
-    margin-bottom: 15px;
+    padding: 13px 15px;
     box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
-    transition: box-shadow 250ms linear;
+    transition: color 250ms linear;
     border-radius: 10px;
     border: 3px solid #2196f3;
     font-weight: bold;

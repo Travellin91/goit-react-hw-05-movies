@@ -45,30 +45,30 @@ export default function MovieDetailsPage() {
     <>
       <Container>
         <button onClick={handleClick} className='backButton'>
-          Go back
+        Повернутися назад
         </button>
 
         {movie && <PageHeading text={movie.title} />}
         {loading && 'Завантаження ...'}
         {error && <div>{error}</div>}
         {movie && (
-          <div>
+          <div className='info_type'>
             <img
               src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
             />
             <h3>{movie.title}</h3>
             <p>({getYear()})</p>
-            <p>User Score: {movie.popularity}</p>
+            <p>Рейтинг користувачів: {movie.popularity}</p>
             <div className='movie_overview'>
-              <h3>Overview</h3>
+              <h3>Огляд</h3>
               <p>{movie.overview}</p>
             </div>
           </div>
         )}
         <hr />
-        <div>
-          <h2>Додаткова інформація</h2>
+        <div className='info_types'>
+          <h2 className='info'>Додаткова інформація</h2>
           <NavLink
             to={`/movies/${movieId}/reviews`}
             style={({ isActive }) => (isActive ? activeClassName : undefined)}

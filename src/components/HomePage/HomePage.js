@@ -30,8 +30,8 @@ export default function GetTrendingMovies() {
   return (
     <>
       <Container>
-        <PageHeading text={'Trending Movies'}></PageHeading>
-        {loading && 'Завнтаження ...'}
+        <PageHeading text={'Популярні фільми'}></PageHeading>
+        {loading && 'Завантаження ...'}
         {isNotFound && <NotFoundView />}
         {error && <div>{error}</div>}
         {movies && <MovieList movies={movies} />}
