@@ -1,4 +1,4 @@
-import styles from './MovieDetailsPage.styles.css';
+import 'components/MovieDetailsPage/MovieDetailsPage.styles.css';
 import Container from 'components/Container/Container';
 import { useEffect, useState } from 'react';
 import {
@@ -44,7 +44,7 @@ export default function MovieDetailsPage() {
   return (
     <>
       <Container>
-        <button onClick={handleClick} className={styles.backButton}>
+        <button onClick={handleClick} className='backButton'>
           Go back
         </button>
 
@@ -60,7 +60,7 @@ export default function MovieDetailsPage() {
             <h3>{movie.title}</h3>
             <p>({getYear()})</p>
             <p>User Score: {movie.popularity}</p>
-            <div className="movie_overview">
+            <div className='movie_overview'>
               <h3>Overview</h3>
               <p>{movie.overview}</p>
             </div>
@@ -74,7 +74,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={styles.reviews}>Відгуки</p>
+            <p className='reviews'>Відгуки</p>
           </NavLink>
 
           <NavLink
@@ -82,7 +82,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={styles.cast}>Акторський склад</p>
+            <p className='cast'>Акторський склад</p>
           </NavLink>
           <hr />
           <Outlet />
