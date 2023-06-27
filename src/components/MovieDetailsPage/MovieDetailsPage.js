@@ -76,7 +76,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className="revPiews">Відгуки</p>
+            <p className="reviews">Відгуки</p>
           </NavLink>
 
           <NavLink
